@@ -1,0 +1,229 @@
+@import url(./bootstrap.min.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    --branco: #fff;
+    --cinza: #323E40;
+    --amarelo: #F2AE2E;
+    --laranja: #D96704;
+    --laranjaEscuro: #BF2604;
+    --vermelho: #730202;
+}
+
+body{
+    font-size: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+header{
+    width: 100%;
+    background: linear-gradient(to right, #6D888C, #3C4A4D, #323E40, #283133);
+    transition: background ease-out 0.2s;
+}
+#navegacao.active{
+    position: fixed;
+    box-shadow: 0 0 30px rgba(0, 0,0, 0.2);
+    z-index: 9999;
+}
+#navegacao{
+    color: var(--branco);
+}
+#navegacao .nav-link{
+    text-transform: uppercase;
+    
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: var(--branco);
+    border-bottom: solid 1px transparent;
+}
+#navegacao .nav-link:hover{
+    color: var(--amarelo);
+    border-bottom: solid 1px var(--amarelo);
+}
+#navegacao .esconde{
+    display: none;
+}
+#sobre, p {
+    text-align: justify;
+}
+#sobre .container-fluid{
+    width: 80%;
+}
+#sobre #info{
+    background-color: var(--branco);
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0,0, 0.4);
+}
+#cadastro{
+    background: url(../img/pizza.png) center no-repeat fixed;
+    padding: 5%;
+    color: var(--amarelo);
+}
+#cadastro .btn{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    width: 80%;
+    color: var(--branco);
+    margin-left: 10%;
+}
+#cadastro i{
+    color: var(--branco);
+    padding-left: 5%;
+}
+#cadastro #cadastrar{
+    background-color: var(--laranja);
+}
+#cadastro #cadastrar:hover{
+    background-color: var(--vermelho);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    color: var(--laranjaEscuro);
+}
+#cadastro #logar{
+    background-color: var(--vermelho);
+}
+#cadastro #logar:hover{
+    background-color: var(--laranja);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    color: var(--laranjaEscuro);
+}
+.bg{
+    background-image: url(../img/pizzaFundo.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+}
+#borda{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#conta{
+    background-color: #ffffffcc;
+}
+#titulo h4{
+    color: var(--amarelo);
+}
+#formulario label{
+    color: var(--laranja);
+}
+#botao{
+    width: 100%;
+}
+#botao .btn{
+    width: 25%;
+    padding: 2%;
+    text-align: center;
+    background-color: var(--laranja);
+    color: var(--amarelo);
+    border-radius: 30px;
+    
+}
+#botao .btn:hover{
+    background-color: #730202;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+#cardapio .badge{
+    font-weight: 400;
+}
+#cardapio .element-item img{
+    border-radius: 5px;
+    transition: all ease-out 0.2s;
+}
+#cardapio .element-item img:hover{
+    box-shadow: 0 0 30px rgba(0, 0,0, 0.4);
+}
+#cardapio .button-group{
+    margin-bottom: 30px;
+}
+#cardapio .button-group button{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
+}
+#cardapio .button-group button + button{
+    margin-left: 30px;
+}
+#cardapio .button-group button.active{
+    color: var(--vermelho);
+}
+#cardapio .col-6{
+    background-color: var(--branco);
+    padding: 2%;
+}
+#rodape{
+    background: linear-gradient(to left, #6D888C, #3C4A4D, #323E40, #283133);;
+    padding: 2%;
+}
+#rodape h4{
+    color: var(--amarelo);
+    text-align: center;
+    margin-bottom: 10%;
+}
+#rodape li{
+    list-style-type: none;
+    padding: 2%;
+    margin-top: 3%;
+    background-color: #f5f5f581;
+    border-radius: 5px;
+    color: var(--laranja);
+    width: 100%;
+}
+#rodape li:hover{
+    box-shadow: 0 0 20px rgba(0, 0,0, 0.6);
+}
+#rodape h6{
+    display: inline;
+    margin-left: 20%;
+}
+#rodape i{
+    color: var(--laranjaEscuro);
+}
+#rodape a, i{
+    text-decoration: none;
+}
+#rodape #local:hover{
+    color: #ff0000;
+}
+#rodape #telefone:hover{
+    color: #000000;
+}
+#rodape #whatsapp:hover{
+    color: #008000;
+}
+#rodape #facebook:hover{
+    color: #3B5998;
+}
+#rodape #instagram:hover{
+    color: #9e2a8f;
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+
+}

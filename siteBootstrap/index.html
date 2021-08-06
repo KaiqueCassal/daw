@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="design/magnific-popup.css">
+    <link rel="stylesheet" href="design/main.css">
+
+    <title>Buenos Pizzaria</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header id="navegacao" >
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light justify-content-between ">
+              <a class="navbar-brand" href="index.html" id="logo">
+                <img src="img/logoMobile.png" alt="" width="80" class="d-inline-block align-text-top img-fluid">
+              </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav .justify-content-center">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#cartaz">principal</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#sobre">informações</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#cadastro">conta</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#cardapio">cardapio</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#rodape">contatos</a>
+                        </li>
+                        <li class="nav-item esconde" id="perfil">
+                          <a class="nav-link" href="conta.html" onclick="mostrar()">perfil</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="cartaz" class="align-self-center">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/cartazPizza.png" class="d-block w-100 img-fluid" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/cartazPizza2.png" class="d-block w-100 img-fluid" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/cartazPizza3.png" class="d-block w-100 img-fluid" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <article id="sobre" class="mt-3">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 text-center align-self-center">
+              <img src="img/logoChefe.png" alt="" class="img-fluid pb-2">
+            </div>
+
+            <div id="info" class="col-md-6 align-self-center ">
+              <h2 class="text-center">SOBRE NÓS:</h2>
+                <h4 class="text-center">informações</h4>
+                  <p class="p-1">Olá queridos clientes.
+
+                    <ul>
+                      <li class="p-2">
+                        Aqui nós começamos a pegar pedidos as 18H, mas as entregas começam as 19H e finalizamos as 23H.
+                      </li>
+
+                      <li class="p-2">
+                        Aqui vendemos apenas pizzas, calzones e bebidas.
+                      </li>
+
+                      <li class="p-2">
+                        Não precisa reservar mesa para utilizar o salão.
+                      </li>
+
+                      <li class="p-2">
+                        Aceitamos dos os cartões de credito, mas NÃO aceitamos vales alimentação.
+                      </li>
+
+                      <li class="p-2">
+                        Caso ocorra um erro da NOSSA parte, trocaremos seu pedido sem problemas.
+                      </li>
+                    </ul>
+
+                    Caso tenha mais duvidas,  fique a vontade para perguntar de forma educada com os nossos atendentes
+                  </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="cadastro" class="mt-4">
+        <div class="container">
+          <div class="row">
+              <div class="col-md-8 justify-content-center">
+                <h2 class="text-center text-uppercase pb-5">crie já sua conta</h2>
+                <div class="d-grid gap-2 ">
+              
+                  <button class="btn text-center text-uppercase" id="cadastrar" type="button" data-toggle="modal" data-target="#modal">cadastrar <i class="bi bi-chevron-right"></i>
+                  </button>
+                  
+                  <a href="">
+                    <button class="btn text-center text-uppercase" id="logar" type="button">logar <i class="bi bi-person"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-4 justify-content-end pt-3">
+                <img src="img/logo.png" alt="" width="300" class="img-fluid">
+              </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="modal bg" id="modal" role="dialog">
+        <div class="modal-dialog modal-lg" id="borda">
+          <div class="modal-content" id="conta">
+      
+            <!-- Modal Header -->
+            <div class="modal-header align-self-center" id="titulo">
+              <h4 class="modal-title text-center mb-3 text-uppercase">faça já sua conta</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form class="row g-3" id="formulario">
+                <div class="col-md-12">
+                  <label for="inputEmail4" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="inputEmail" required autofocus placeholder="digite seu e-mail">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="inputNome" required placeholder="digite seu nome">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Sobrenome</label>
+                  <input type="text" class="form-control" id="inputSobrenome" required placeholder="digite seu sobrenome">
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Endereço</label>
+                  <input type="text" class="form-control" id="inputEndereco" required placeholder="digite seu endereço: rua, número, bairo">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Referencia</label>
+                  <input type="text" class="form-control" id="inputReferencia" placeholder="digite alguma referencia">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Celular</label>
+                  <input type="tel" class="form-control" id="inputCelular" required placeholder="digite seu número">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Senha</label>
+                  <input type="password" class="form-control" id="inputSenha" required placeholder="crie uma senha">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword4" class="form-label">Confirmar Senha</label>
+                  <input type="password" class="form-control" id="inputConfirmaSenha" required placeholder="digite sua senha" data-equal="inputPassword">
+                </div>
+              </form>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer" id="botao">
+              <button type="button" class="btn text-uppercase" data-dismiss="modal">fechar</button>
+              <button type="submit" class="btn text-uppercase"onclick="salvar()" id="btnCadastro">cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <article id="cardapio" class="pt-4">
+        <div class="block">
+          <div class="container">
+            <h2 class="title text-center text-uppercase">
+              cardapios
+            </h2>
+
+            <div class="button-group item-menu">
+              <button type="button" class="active" data-filter="*">todos</button>
+              <button type=".button" data-filter=".pizza">pizzas</button>
+              <button type="button" data-filter=".calzone">calzones</button>
+              <button type="button" data-filter=".bebida">bebidas</button>
+              <button type="button" data-filter=".borda">bordas</button>
+            </div>
+            <div class="row grid item-details">
+
+              <div class="col-lg-4 col-6 mb-4 element-item pizza">
+                <a href="img/CardapioBuenos/pizza1.png" class="popup-link">
+                  <img src="img/CardapioBuenos/pizza1.png" alt="" class="img-fluid mb-2">
+                </a>
+                <h4 class="text-uppercase"> pizzas </h4>
+                <p class="mb-0">
+                  <span class="badge bg-light text-dark">pizza</span>
+                </p>
+              </div>
+
+              <div class="col-lg-4 col-6 mb-4 element-item pizza">
+                <a href="img/CardapioBuenos/pizza2.png" class="popup-link">
+                  <img src="img/CardapioBuenos/pizza2.png" alt="" class="img-fluid mb-2">
+                </a>
+                <h4 class="text-uppercase"> pizzas </h4>
+                <p class="mb-0">
+                  <span class="badge bg-light text-dark">pizza</span>
+                </p>
+              </div>
+
+              <div class="col-lg-4 col-6 mb-4 element-item calzone">
+                <a href="img/CardapioBuenos/calzone1.png" class="popup-link">
+                  <img src="img/CardapioBuenos/calzone1.png" alt="" class="img-fluid mb-2">
+                </a>
+                <h4 class="text-uppercase"> calzones </h4>
+                <p class="mb-0">
+                  <span class="badge bg-light text-dark">calzone</span>
+                </p>
+              </div>
+
+              <div class="col-lg-4 col-6 mb-4 element-item calzone">
+                <a href="" class="popup-link">
+                  <img src="img/CardapioBuenos/calzone2.png" alt="" class="img-fluid mb-2">
+                </a>
+                <h4 class="text-uppercase"> calzones </h4>
+                <p class="mb-0">
+                  <span class="badge bg-light text-dark">calzone</span>
+                </p>
+              </div>
+
+              <div class="col-lg-4 col-6 mb-4 element-item bebida">
+                <a href="img/CardapioBuenos/bebida1.png" class="popup-link">
+                  <img src="img/CardapioBuenos/bebida1.png" alt="" class="img-fluid mb-2">
+                </a>
+                <h4 class="text-uppercase"> bebidas </h4>
+                <p class="mb-0">
+                  <span class="badge bg-light text-dark">bebida</span>
+                </p>
+              </div>
+
+              <div class="col-lg-4 col-6 mb-4 element-item borda">
+                <a href="img/CardapioBuenos/borda1.png" class="popup-link">
+                  <img src="img/CardapioBuenos/borda1.png" alt="" class="img-fluid mb-2">
+                </a>
+                <h4 class="text-uppercase"> bordas </h4>
+                <p class="mb-0">
+                  <span class="badge bg-light text-dark">borda</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer id="rodape">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-5 align-self-center" id="contatos">
+              <h4 class="text-uppercase">endereço:</h4>
+                <ul>
+                  <li>
+                    <a href="https://goo.gl/maps/fLfB4FX44cCmchVN7" target="_blank"><i class="bi bi-geo-alt" id="local"></i></a>
+                    <h6>Rua Coronel Barros Leite, nº 93, centro</h6>
+                  </li>
+                </ul>
+          </div>
+
+          <div class="col-md-3 align-self-center" id="contatos">
+            <h4 class="text-uppercase">contatos:</h4>
+            <ul>
+              <li>
+                <i class="bi bi-telephone" id="telefone"></i>
+                  <h6>3972-3345</h6>
+              </li>
+              <li>
+                <a href="https://wa.me/c/5512988510896" target="_blank">
+                  <i class="bi bi-whatsapp" id="whatsapp"></i>
+                </a>
+                 <h6>(12)98851-0896</h6>
+              </li>
+            </ul>
+          </div>
+
+          <div id="redes" class="col-md-4 align-self-center">
+            <h4 class="text-uppercase">redes sociais:</h4>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/buenospizzariasb" target="_blank">
+                    <i class="bi bi-facebook" id="facebook"></i>
+                  </a>
+                  <h6>Bueno's Pizzaria</h6>
+                </li>
+                <li>
+                  <a href="" target="_blank">
+                    <i class="bi bi-instagram" id="instagram"></i>
+                  </a>
+                  <h6>@buenospizzariasb</h6>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="scripts/isotope.pkgd.min.js"></script>
+    <script src="scripts/jquery.magnific-popup.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

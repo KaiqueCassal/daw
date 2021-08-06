@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #468eec;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    
+}
+
+header{
+    color: #f5f5f5;
+    text-align: center;
+}
+
+section{
+    background-color: #f5f5f5;
+    color: #00000080;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px #0000005d;
+}
+
+button{
+    margin-left: 40%;
+    padding: 2%;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+footer{
+    color: #f5f5f5;
+    text-align: center;
+    font-style: italic;
+}

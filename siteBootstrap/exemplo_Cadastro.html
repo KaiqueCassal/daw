@@ -1,0 +1,390 @@
+<html>
+	<head>
+		<title> Página com Bootstrap 4 </title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
+        <style>
+
+            /*Classe .esconder com o atributo display impedido a apresentação do elemento, com o valor 'none'*/
+            .esconder{
+                display:none;
+            }
+
+            .jumbotron{
+                background-color: whitesmoke;
+            }
+
+            .menu{
+                background-color: whitesmoke;
+                border-color:whitesmoke; 
+            }
+
+        </style>
+
+
+	</head> 
+	
+	<body>
+        <nav class="navbar navbar-expand-md fixed-top" id="navbar">
+
+			<a class="navbar-brand" href="#myPage">Logo</a>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+				<span class="navbar-toggler-icon"></span>                       
+			</button>
+
+			<div class="collapse navbar-collapse" id="myNavbar"> 
+				<ul class="navbar-nav" >
+					<li class="nav-item">
+
+                        <div class="dropdown "> <!--Botão com menu dropdown para cadastros-->
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle menu" data-toggle="dropdown">
+                              Cadastros
+                            </button>
+                            
+                            <div class="dropdown-menu">
+                              <a id="lnkCad" class="dropdown-item" href="#">Cadastro de funcionários</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+					<li class="nav-item">
+
+                        <div class="dropdown"> <!--Botão com menu dropdown para Alterações-->
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle menu" data-toggle="dropdown">
+                              Alterar
+                            </button>
+                            
+                            <div class="dropdown-menu">
+                              <a id="lnkAlt" class="dropdown-item" href="#">Funcionários</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
+                        </div>                   
+                    </li>
+					<li class="nav-item">
+
+                        <div class="dropdown"> <!--Botão com menu dropdown para alterações-->
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle menu" data-toggle="dropdown">
+                              Excluir
+                            </button>
+                            
+                            <div class="dropdown-menu">
+                              <a id="lnkExcl" class="dropdown-item" href="#">Funcionário</a>
+                              <a class="dropdown-item" href="#">Link 2</a>
+                              <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
+                        </div>     
+                    </li>
+					<li class="nav-item"><a class="nav-link" href="#pricing">PRICING</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+				</ul>
+			</div>
+
+		</nav>
+
+		<div class="jumbotron text-center">
+			<h1 class="display-3">AdmApp</h1> 
+			<p class="lead">Área admnistrativa</p> 
+	
+		</div>
+
+
+        <!-- <div> para apresentar a lista em um <select>. Inicialmente não visível por causa da classe '.esconder'-->
+        <div class="form-group col-md-4 esconder" id="divSelect">
+            <p><label>Escolha o funcionário a ser alterado: </label></p>
+            
+            <!-- Select para apresentar a lista de nomes cadastrados.-->
+            <!-- Este <select> é utilizado para escolher tanto o dado a ser alterado, quanto o dado a ser excluído.-->
+            <select class="form-control" id="sel1">
+                <!--A lista está inicialmente vazia, e será preenchida conforme cadastros são feitos-->
+            </select>
+        </div>
+
+
+        <!--Inputs para cadastro. Inicialmente não visível por causa da classe '.esconder'-->
+        <div id="divCad" class="container-fluid esconder">
+            <h2>Cadastro de funcionários</h2>
+
+            <!--Todos os inputs estão com a mesma classe para serem obtidos em conjunto, no script-->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Nome:</label>
+                        <input class="cadastro" type='text'>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Idade:</label>
+                        <input class="cadastro" type='text'>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Endereço:</label>
+                        <input class="cadastro" type='text'>
+                        <button id="btnCad" class="btn btn-outline-success">Cadastrar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--Inputs para alteração. Inicialmente não visível por causa da classe '.esconder'-->
+        <div id="divAlt" class="container-fluid esconder">
+            <h2>Alterar cadastro</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Nome:</label>
+                        <input class="alterar" type='text'>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Idade:</label>
+                        <input class="alterar" type='text'>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Endereço:</label>
+                        <input class="alterar" type='text'>
+                        <button id="btnAlt" class="btn btn-outline-success">Alterar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!--Botão para a opção de excluir. Inicialmente não visível por causa da classe '.esconder'-->
+        <button id="btnExcl" class="btn btn-danger esconder">Excluir</button>
+
+
+
+        <script>
+            //Função para a atualizar a lista no <select> com o array 'cadastro'. 
+            //Esta função será chamada diversas vezes no script a seguir.
+            function atualizaSelectList(cadastro, sel){
+                var t = "";
+                var cont = 0;
+
+                //Cada opção do <select> é um <option>. Todas as opções são concatenadas na variável 't'
+                cadastro.forEach(function(dado){ 
+                    t=t+"<option>"+dado[0]+"</option>";
+                    cont++;
+                });
+
+                //A variável 't' é atribuída ao innerHTML do <select>
+                sel.innerHTML = t;
+            }
+
+            //Preenche os inputs com os dados de um cadastro do array 'cadastro'. 
+            //Este cadastro é indicado pela sua posição no array 'cadastro', que é o parâmetro 'indice'
+            function preencheInputs(inputs, cadastro, indice){
+                inputs[0].value = cadastro[indice][0];
+                inputs[1].value = cadastro[indice][1];
+                inputs[2].value = cadastro[indice][2];
+            }
+
+
+
+
+            //Início do script
+
+            //Array para manter os cadastros
+            var cadastro = [];
+            
+            //Obtém a referência do <select>
+            var sel = document.querySelector("#sel1");
+
+            //O índice da opção selecionada no <select> é inicialmente o 0
+            var indiceSel = 0;
+
+
+
+            //Gerenciador de eventos para a opção de Cadastrar Funcionários, no Menu
+            var lnk = document.querySelector("#lnkCad");
+            lnk.addEventListener("click", function(){ //Ao clicar no link para Cadastrar Funcionários, no Menu...
+                //Remove a classe .esconder do <div> contendo os inputs de cadastro
+                let divCad = document.querySelector("#divCad");
+                divCad.classList.remove("esconder");
+
+                //Adiciona a classe .esconder para os divs de alteração, <select> e botão de Excluir cadastro
+                let divAlt = document.querySelector("#divAlt");
+                divAlt.classList.add("esconder");
+                let divSelect = document.querySelector("#divSelect");
+                divSelect.classList.add("esconder");
+                let btnExcl = document.querySelector("#btnExcl");
+                btnExcl.classList.add("esconder");
+            });
+
+
+            /*
+            Gerenciador de eventos do <select> para obter a opção selecionada e preencher os inputs com os dados desta
+            opção.
+            Este <select> é utilizado tanto para escolher o dado a ser alterado, quanto o dado a ser excluído. 
+            */
+            sel.addEventListener("change", function(e){ //Ao alterar a opção do <select> ...
+
+                //Obtém a opção selecionada, e armazena o índice desta opção na variável 'indiceSel'
+                indiceSel = this.selectedIndex;
+
+                /*Obtém as referências de todos os inputs da classe '.alterar'. Estas referências são atribuídas 
+                ao array 'inputsAlterar'*/
+                let inputsAlterar = document.querySelectorAll(".alterar");
+
+                //Chama a função 'preencheInputs', para preencher os inputs com os dados do cadastro no índice selecionado               
+                preencheInputs(inputsAlterar, cadastro, indiceSel);
+            });    
+                
+
+            //CADASTRAR
+            //Gerenciado de eventos do botão para confirmar o cadastro
+            var btnCad=document.querySelector("#btnCad");           
+            btnCad.addEventListener("click",function(){//Ao clicar no botão para confirmar o cadastro... 
+
+                var dados = [];
+                //Obtém a referência de todos os inputs com a classe .cadastro, colocando-as no array inputs
+                let inputs = document.querySelectorAll(".cadastro");
+
+                //Preenche o array 'dados' com os valores dos inputs. Cada posição de 'dados' tem o valor de um <input>
+                //Os inputs são: Nome, Idade e Endereço
+                inputs.forEach(function(el){
+                    dados.push(el.value);
+                    el.value="";
+                });
+
+                //Adiciona todo o array 'dados' em uma posição do array 'cadastro'. 
+                //Cada posição de 'cadastro' é um array com: Nom, idade e endereço de uma pessoa diferente.
+                cadastro.push(dados); 
+
+                //Atualiza o <select> com o array 'cadastro'
+                atualizaSelectList(cadastro, sel);
+
+
+                //Esconde os inputs de cadastro novamente
+                var divCad = document.querySelector("#divCad");
+                divCad.classList.add("esconder");
+            });
+
+
+
+
+
+
+            //ALTERAR
+
+            //Obtém a referência de todos os inputs com a classe .alterar
+            var inputsAlterar = document.querySelectorAll(".alterar");
+            
+            //Gerenciador de eventos para a opção de Alterar Funcionário, no menu.          
+            var lnk = document.querySelector("#lnkAlt");
+            lnk.addEventListener("click", function(){ //Ao clicar no link para Alterar Funcionários, no Menu... 
+
+                //Remove a classe .esconder do <select> para escolher o funcionário a ser alterado
+                let divSelect = document.querySelector("#divSelect");
+                divSelect.classList.remove("esconder");
+
+                //Remove a classe .esconder dos inputs dos dados de alteração do cadastro
+                let divAlt = document.querySelector("#divAlt");
+                divAlt.classList.remove("esconder");
+
+
+                //Adiciona a classe .esconder aos inputs de cadastro
+                let divCad = document.querySelector("#divCad");
+                divCad.classList.add("esconder");
+
+                //Adiciona a classe .esconder ao botão de excluir
+                let btnExcl = document.querySelector("#btnExcl");
+                btnExcl.classList.add("esconder");
+
+                //Chama a função 'preencheInputs' para preencher os inputs com os dados do primeiro cadastro
+                preencheInputs(inputsAlterar, cadastro, 0);                
+            });
+            
+
+            //Obtém a referência para o botão de confirmar a alteração do cadastro
+            var btnAlt = document.querySelector("#btnAlt");
+
+            //Gerenciador de eventos do botão de confirmar a alteração do cadastro
+            btnAlt.addEventListener('click', function(){ //Ao clicar no botão de alteração do cadastro...
+
+                /*Preenche o array 'cadastro' na posição da opção selecionada no <select>, com os novos valores dos 
+                inputs. A opção selecionada no <select> é sempre representada pela variável 'indiceSel'*/
+                cadastro[indiceSel][0] = inputsAlterar[0].value;
+                cadastro[indiceSel][1] = inputsAlterar[1].value;
+                cadastro[indiceSel][2] = inputsAlterar[2].value;
+                
+                //Chama a função 'atualizaSelectList' com os dados do cadastro e usando a referência do <select>
+                atualizaSelectList(cadastro, sel);
+                
+                //Volta o índice do <select> para a primeira posição, após atualizar o cadastro
+                indiceSel = 0;
+
+            });
+
+
+            
+            //EXCLUIR
+            //Gerenciador de eventos para a opção de Excluir Funcionário, no menu.     
+            var lnk = document.querySelector("#lnkExcl");
+            lnk.addEventListener("click", function(){//Ao clicar na opção de Excluir Funcionário, no menu...
+
+                //Retira a classe .esconder do <select> e do botão 'Excluir'
+                let divSelect = document.querySelector("#divSelect");
+                divSelect.classList.remove("esconder");
+                let btnExcl = document.querySelector("#btnExcl");
+                btnExcl.classList.remove("esconder");
+
+                //Adiciona a classe .esconder aos inputs de alteração de cadastro, e de cadastro
+                let divAlt = document.querySelector("#divAlt");
+                divAlt.classList.add("esconder");
+                let divCad = document.querySelector("#divCad");
+                divCad.classList.add("esconder");
+                
+            });
+             
+            
+            //Gerenciador de eventos do botão 'Excluir'
+            var btnExcl = document.querySelector("#btnExcl");
+            btnExcl.addEventListener("click", function(){//Ao clicar no botão 'Excluir'
+
+                /*Utiliza o método splice para remover de 'cadastro' os dados na opção selecionada no <select>. 
+                A opção do <select> é sempre indicada pela variável 'indiceSel'.*/
+                cadastro.splice(indiceSel, 1);
+
+                //Chama a função 'atualizaSelectList' para atualizar o <select>
+                atualizaSelectList(cadastro, sel);
+
+                //Altera a opção do <select> para a primeira
+                indiceSel = 0;
+            });
+
+
+
+        </script>
+    </body>
+</html>

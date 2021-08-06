@@ -1,0 +1,335 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* RESET */
+*{
+    margin: 0; 
+    padding: 0; 
+    font-size: 100%; 
+    border: none; 
+    outline: none;
+    font-weight: 300; 
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+
+/* HEADER */
+#cabecalho{
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+    /*background: linear-gradient(to right, #D97777, #A62626, #8C1127, #400A14);*/
+    background: linear-gradient(to left, #D97777, #A62626, #A62626, #8C1127, #8C1127, #400A14, #400A14);
+}
+#logo{
+    width: 70px;
+    height: 70px;
+    float: left;
+    background: url(../img/logos/logoMobile.png) center center/56px no-repeat;
+    font-size: 0;
+    margin-left: 5%;
+}
+#btnMenu{
+    width: 56px;
+    height: 56px;
+    margin-top: 3%;
+    float: right;
+    text-align: center;
+    color: #fff;
+    border-radius: 56px;
+    cursor: pointer;
+    background: linear-gradient(to right, #D97777, #A62626, #8C1127);
+}
+
+/* NAV */
+#menu{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000e0;
+    top: 0;
+    left: 0;
+}
+#btnFechar{
+    font-size: 1.5em;
+    color: #fff;
+    float: right;
+    cursor: pointer;
+    margin: 2% 3% 0 0;
+}
+#menu ul{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+#menu li{
+    padding: 1.5%;
+}
+#menu li a{
+    font-size: 2em;
+    color: #fff;
+    padding: 1.5% 3%;
+}
+#menu li a:hover{
+    border: 1px solid #D9AB73;
+    color: #D9AB73;
+    border-radius: 10px;
+}
+/* DIV */
+#cadastro{
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 3% 4%;
+    /*background: linear-gradient(to right, #D97777, #A62626, #8C1127, #400A14);*/
+    background: linear-gradient(to left, #D97777, #A62626, #A62626, #8C1127, #8C1127, #400A14, #400A14);
+    border-radius: 0 0 0 70px;
+}
+#frase{
+    width: 100%;
+    padding: 0.5%;
+    color: #D9AB73;
+}
+#frase h2{
+    font-size: 2em;
+    
+    font-weight: 700;
+}
+#frase h3{
+    font-size: 1em;
+    
+    margin-bottom: 3%;
+}
+#btns{
+    width: 100%;
+}
+#btns i{
+    float: right;
+    padding: 1%;
+}
+.btn{
+    width: 30%;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 2%;
+    border-radius: 10px;
+}
+#btnCadastrar{
+    background-color: #f5f5f5;
+    color: #130400;
+    
+}
+#btnCadastro:hover{
+    background-color: #130400;
+    color: #f5f5f5;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.925);
+}
+#btnLogin{
+    background-color: #130400;
+    color: #f5f5f5;
+}
+#btnLogin:hover{
+    background-color: #f5f5f5;
+    color: #130400;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.925);
+}
+/* MAIN */
+#conteudos{
+    width: 70%;
+    float: left;
+    padding: 3% 4%;
+}
+.conteudo{
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    border-radius: 7px;
+    margin-bottom: 3%;
+}
+.conteudo img{
+    border-radius: 7px 7px 0 0 ;
+    width: 100%;
+    height: 300px;
+}
+.descricao{
+    padding: 7%;
+}
+.descricao h3{
+    font-size: 1.5em;
+    color: #130400;
+    margin-top: 2%;
+    font-weight: 700;
+}
+.descricao p{
+    color: #130400;
+    margin-top: 6%;
+    line-height: 1.5em;
+    text-align: justify;
+}
+/* SECTION */
+#newsletter{
+    width: 100%;
+    text-align: center;
+    float: left;
+    padding: 3% 4%;
+    background: linear-gradient(to right, #D97777, #A62626, #A62626, #8C1127, #8C1127, #400A14, #400A14);
+    border-radius: 0 70px 0 0;
+}
+#newsletter h2{
+    font-size: 1.5em;
+    color: #D9AB73;
+    font-weight: 700;
+    margin-bottom: 3%;
+    text-align: center;
+}
+#social{
+    margin: auto;
+}
+#social a{
+    width: 100%;
+    margin: 7%;
+    color: #D9AB73;
+}
+#social a:first-child{
+    margin-left: 0;;
+}
+#social a:last-child{
+    margin-right: 0;
+}
+#btnFace:hover{
+    color: #3B5998;
+}
+#btnInsta:hover{
+    color: #9e2a8f;
+}
+#btnTwi:hover{
+    color: #54A4D6;
+}
+/* FOOTER */
+#rodape{
+    width: 100%;
+    float: left;
+    padding: 2% 4%;
+    text-align: center;
+    background-color: #130400;
+}
+#rodape p{
+    color: #ffffffb3;
+}
+
+/* SMALL DEVICE - SMARTPHONES*/
+@media screen and (min-width: 480px) {
+    #logo{
+        width: 200px;
+        height: 100px;
+        background: url(../img/logos/logo.png) center center/200px no-repeat;
+        margin-left: 2%;
+    } 
+    #btn{
+        font-size: 2em;
+    }
+}
+/* SMALL DEVICE - TABLETS */
+@media screen and (min-width: 768px) {
+    .conteudo{
+        width: 45%;
+        float: left;
+        margin-right: 2%;
+    }
+    .conteudo:nth-child(2){
+        margin-right: 0;
+    }
+    #newsletter h2{
+        font-size: 2em;
+    }
+}
+/* MEDIUM DEVICE - TABLETS E DESKTOPS */
+@media screen and (min-width: 960px) {
+    #frase{
+        width: 67%;
+        float: left;
+        text-align: left;
+        margin-left: 3%;
+    }
+    #frase h2{
+        font-size: 3em;
+    }
+    #frase h3{
+        font-size: 2em;
+    }
+    .btn{
+        font-size: 1em;
+        width: 27%;
+        float: right;
+    }
+    
+    #btnCadastro{
+        margin-bottom: 1%;
+    }
+    #conteudos{
+        width: 80%;
+    }
+    .conteudo{
+        width: 30%;
+        margin-right: 2%;
+        font-size: 0.8em;
+    }
+    .conteudo:nth-child(2){
+        margin-right: 2%;
+    }
+}
+/* LARGE DEVICE - WIDE SCREENS */
+@media screen and (min-width: 1280px) {
+    .btn{
+        padding: 1.5%;
+    }
+    #newsletter{
+        padding: 1%;
+    }
+    #rodape{
+        padding: 0.5%;
+    }
+    #btnMenu{
+        display: none;
+    }
+    #btnFechar{
+        display: none;
+    }
+    #menu{
+        width: auto;
+        height: 56px;
+        line-height: 56px;
+        float: right;
+        background-color: #400a1400;
+        border-radius: 20px;
+        display: block !important;
+        position: static;
+    }
+    #menu li{
+        padding: 0;
+        float: left;
+    }
+    #menu li a{
+        color: #fff;
+        font-size: 1.5em;
+        padding: 15px;
+    }
+    #menu li a:hover{
+        border: none;
+        color: #D9AB73;
+    }
+}
