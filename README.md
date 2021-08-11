@@ -1,2 +1,2 @@
-# daw
- Atividades da diciplina de DAW.
+# DAW
+ Atividades da diciplina de Desenvolvimento de Aplicações WEB.
